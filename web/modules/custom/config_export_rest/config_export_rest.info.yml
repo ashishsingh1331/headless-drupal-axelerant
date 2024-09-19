@@ -1,0 +1,9 @@
+name: 'Config Export REST API'
+type: module
+description: 'Provides a REST API to export site configurations.'
+core_version_requirement: ^10
+dependencies:
+  - drupal:rest
+  - drupal:user
+  - drupal:config
+package: Custom
