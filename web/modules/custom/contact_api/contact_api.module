@@ -1,0 +1,40 @@
+<?php 
+/**
+ * Function to send an email.
+ */
+function contact_api_send_email($to, $subject, $body) {
+  $module = 'contact_api'; // Your custom module name
+  $key = 'your_key'; // The key for your email template
+  $langcode = \Drupal::currentUser()->getPreferredLangcode();
+  $from = \Drupal::config('system.site')->get('mail'); // Default site email
+  $send = TRUE; // Set to TRUE to send immediately
+  $params = [
+    'subject' => $subject,
+    'message' => $body,
+  ];
+
+  // Log email details before sending
+  \Drupal::logger('contact_api')->notice('Sending email to: @to with subject: @subject and body: @body', [
+    '@to' => $to,
+    '@subject' => $subject,
+    '@body' => $body,
+  ]);
+
+  // Send the email
+  $result = \Drupal::service('plugin.manager.mail')->mail(
+    $module,
+    $key,
+    $to,
+    $langcode,
+    $params,
+    $from,
+    $send
+  );
+
+  // Log the result of the email send action
+  if ($result['result'] !== TRUE) {
+    \Drupal::logger('contact_api')->error('Email failed to send to: @to', ['@to' => $to]);
+  } else {
+    \Drupal::logger('contact_api')->notice('Email successfully sent to: @to', ['@to' => $to]);
+  }
+}

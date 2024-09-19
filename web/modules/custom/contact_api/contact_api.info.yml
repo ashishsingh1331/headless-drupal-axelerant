@@ -1,0 +1,7 @@
+name: "Contact API"
+type: module
+description: "Exposes an API for submitting personal contact form data using the Contact module."
+core_version_requirement: ^10
+package: Custom
+dependencies:
+  - contact

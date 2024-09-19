@@ -1,0 +1,8 @@
+contact_api.contact_user:
+  path: "/api/contact-user"
+  defaults:
+    _controller: '\Drupal\contact_api\Controller\ContactApiController::submitContactForm'
+    _title: "Submit Contact Form"
+  methods: ["POST"]
+  requirements:
+    _permission: "access content"
