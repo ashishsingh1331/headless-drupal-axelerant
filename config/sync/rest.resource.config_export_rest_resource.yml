@@ -1,0 +1,18 @@
+uuid: 76a85c7c-7d7f-4e83-9aad-ba5dc6f1ccf3
+langcode: en
+status: true
+dependencies:
+  module:
+    - config_export_rest
+    - serialization
+    - user
+id: config_export_rest_resource
+plugin_id: config_export_rest_resource
+granularity: resource
+configuration:
+  methods:
+    - GET
+  formats:
+    - json
+  authentication:
+    - cookie
