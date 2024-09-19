@@ -1,0 +1,6 @@
+config_export_rest.settings:
+  title: 'Config Export Settings'
+  description: 'Configure the settings for Config Export REST API.'
+  route_name: config_export_rest.settings_form
+  parent: system.admin_config_system
+  weight: 100

@@ -1,0 +1,7 @@
+config_export_rest.settings_form:
+  path: '/admin/config/system/config-export-rest'
+  defaults:
+    _form: '\Drupal\config_export_rest\Form\ConfigExportSettingsForm'
+    _title: 'Config Export Settings'
+  requirements:
+    _permission: 'administer site configuration'
