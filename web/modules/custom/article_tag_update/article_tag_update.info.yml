@@ -1,0 +1,10 @@
+name: "Article Tag Update API"
+type: module
+description: "Provides an API to update article nodes by appending tags via a PATCH request."
+core_version_requirement: ^10
+package: Custom
+dependencies:
+  - drupal:rest
+  - drupal:node
+  - drupal:taxonomy
+  - drupal:user

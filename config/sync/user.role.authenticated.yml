@@ -4,12 +4,15 @@ status: true
 dependencies:
   config:
     - filter.format.basic_html
+    - node.type.article
+    - rest.resource.article_tag_update_resource
     - rest.resource.config_export_rest_resource
   module:
     - comment
     - contact
     - file
     - filter
+    - node
     - rest
     - search
     - shortcut
@@ -26,9 +29,11 @@ permissions:
   - 'access shortcuts'
   - 'access site-wide contact form'
   - 'administer rest resources'
+  - 'create article content'
   - 'delete own files'
   - 'post comments'
   - 'restful get config_export_rest_resource'
+  - 'restful patch article_tag_update_resource'
   - 'search content'
   - 'skip comment approval'
   - 'use text format basic_html'
