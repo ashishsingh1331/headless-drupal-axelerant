@@ -1,0 +1,18 @@
+uuid: 1f5f4f48-0ad1-4761-8286-c394d4b50412
+langcode: en
+status: true
+dependencies:
+  module:
+    - article_tag_update
+    - serialization
+    - user
+id: article_tag_update_resource
+plugin_id: article_tag_update_resource
+granularity: resource
+configuration:
+  methods:
+    - PATCH
+  formats:
+    - json
+  authentication:
+    - cookie
