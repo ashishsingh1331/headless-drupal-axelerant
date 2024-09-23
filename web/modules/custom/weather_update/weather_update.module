@@ -1,0 +1,16 @@
+<?php
+/**
+ * Implements hook_theme().
+ */
+function weather_update_theme() {
+    return [
+      'weather_update' => [
+        'variables' => [
+          'temperature' => NULL,
+          'wind' => NULL,
+          'precipitation' => NULL,
+        ],
+      ],
+    ];
+  }
+  

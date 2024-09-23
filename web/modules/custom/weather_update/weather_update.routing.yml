@@ -1,0 +1,7 @@
+weather_update.settings:
+  path: "/admin/config/weather-update"
+  defaults:
+    _form: '\Drupal\weather_update\Form\WeatherApiSettingsForm'
+    _title: "Weather API Settings"
+  requirements:
+    _permission: "administer site configuration"
