@@ -1,0 +1,6 @@
+weather_update.settings:
+  title: "Weather api setting"
+  description: "Configure the settings for Weather api."
+  route_name: weather_update.settings
+  parent: system.admin_config_system
+  weight: 100

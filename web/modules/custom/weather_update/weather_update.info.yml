@@ -1,0 +1,10 @@
+name: 'Weather Update'
+type: module
+description: 'Provides real-time weather updates on the homepage.'
+core_version_requirement: ^10
+package: Custom
+dependencies:
+  - system
+config:
+  install:
+    - weather_update.settings
