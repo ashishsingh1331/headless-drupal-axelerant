@@ -1,0 +1,6 @@
+rate_limit.settings:
+  title: "Rate Limit setting"
+  description: "Configure the settings for rate_limit api."
+  route_name: rate_limit_api.settings
+  parent: system.admin_config_system
+  weight: 100
