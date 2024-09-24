@@ -1,0 +1,10 @@
+name: 'Rate Limit API'
+type: module
+description: 'Provides rate limiting for public API endpoints based on IP addresses or API keys.'
+core_version_requirement: ^10
+package: Custom
+dependencies:
+  - system
+config:
+  install:
+    - rate_limit_api.settings

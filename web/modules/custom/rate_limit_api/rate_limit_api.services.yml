@@ -1,0 +1,6 @@
+services:
+  rate_limit_api.subscriber:
+    class: Drupal\rate_limit_api\EventSubscriber\RateLimitSubscriber
+    arguments: ["@cache.default", "@logger.factory"]
+    tags:
+      - { name: event_subscriber }
