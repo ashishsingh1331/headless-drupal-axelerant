@@ -12,6 +12,7 @@ dependencies:
     - contact
     - file
     - filter
+    - language
     - node
     - rest
     - search
@@ -28,6 +29,7 @@ permissions:
   - 'access content'
   - 'access shortcuts'
   - 'access site-wide contact form'
+  - 'administer languages'
   - 'administer rest resources'
   - 'create article content'
   - 'delete own files'

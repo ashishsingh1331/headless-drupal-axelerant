@@ -15,6 +15,7 @@ module:
   comment: 0
   config: 0
   config_export_rest: 0
+  config_translation: 0
   contact: 0
   contact_api: 0
   contextual: 0
@@ -32,7 +33,11 @@ module:
   history: 0
   image: 0
   jsonapi: 0
+  jsonapi_defaults: 0
+  jsonapi_extras: 0
+  language: 0
   link: 0
+  locale: 0
   menu_link_content: 0
   menu_ui: 0
   mysql: 0
@@ -55,6 +60,7 @@ module:
   user: 0
   views_ui: 0
   weather_update: 0
+  content_translation: 10
   views: 10
   standard: 1000
 theme:
