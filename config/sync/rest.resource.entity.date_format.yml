@@ -1,0 +1,17 @@
+uuid: b789704a-f82b-4257-8000-6c158e3fb327
+langcode: en
+status: true
+dependencies:
+  module:
+    - serialization
+    - user
+id: entity.date_format
+plugin_id: 'entity:date_format'
+granularity: resource
+configuration:
+  methods:
+    - GET
+  formats:
+    - json
+  authentication:
+    - cookie
