@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - filter.format.basic_html
+    - media.type.image
     - node.type.article
     - rest.resource.article_tag_update_resource
     - rest.resource.config_export_rest_resource
@@ -13,6 +14,7 @@ dependencies:
     - file
     - filter
     - language
+    - media
     - node
     - rest
     - search
@@ -32,10 +34,13 @@ permissions:
   - 'administer languages'
   - 'administer rest resources'
   - 'create article content'
+  - 'create image media'
   - 'delete own files'
+  - 'edit own article content'
   - 'post comments'
   - 'restful get config_export_rest_resource'
   - 'restful patch article_tag_update_resource'
   - 'search content'
   - 'skip comment approval'
   - 'use text format basic_html'
+  - 'view media'
