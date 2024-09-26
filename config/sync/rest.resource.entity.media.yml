@@ -1,0 +1,19 @@
+uuid: 23e28e43-1c36-4ff4-836f-504b0c3ce984
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+    - serialization
+    - user
+id: entity.media
+plugin_id: 'entity:media'
+granularity: resource
+configuration:
+  methods:
+    - GET
+    - POST
+  formats:
+    - json
+  authentication:
+    - cookie
