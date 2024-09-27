@@ -1,0 +1,54 @@
+<?php
+
+/**
+ * Implements hook_entity_delete().
+ *
+ * Logs details when an article (node) is deleted.
+ *
+ * @param \Drupal\Core\Entity\EntityInterface $entity
+ *   The entity being deleted.
+ */
+function article_deletion_logger_entity_delete(\Drupal\Core\Entity\EntityInterface $entity) {
+  // Add debug message to verify that the hook is being invoked.
+  \Drupal::logger('article_deletion')->debug('hook_entity_delete invoked.');
+
+  // Check if the deleted entity is a node and is of type 'article'.
+  if ($entity->getEntityTypeId() === 'node') {
+    \Drupal::logger('article_deletion')->debug('Entity type is node.');
+    
+    if ($entity->bundle() === 'article') {
+      \Drupal::logger('article_deletion')->debug('Node bundle is article.');
+      
+      // Get the current user.
+      $current_user = \Drupal::currentUser();
+      $user_id = $current_user->id();
+      $user_name = $current_user->getDisplayName();
+
+      // Add more debug information.
+      \Drupal::logger('article_deletion')->debug('Current user: {uid} ({name})', [
+        'uid' => $user_id,
+        'name' => $user_name,
+      ]);
+
+      // Log the deletion event.
+      \Drupal::logger('article_deletion')->notice('Article "{title}" (ID: {nid}) was deleted by user {uid} ({name}).', [
+        'title' => $entity->getTitle(),
+        'nid' => $entity->id(),
+        'uid' => $user_id,
+        'name' => $user_name,
+      ]);
+    }
+    else {
+      // Log if the entity is not an article.
+      \Drupal::logger('article_deletion')->debug('Entity is not an article. Bundle: {bundle}', [
+        'bundle' => $entity->bundle(),
+      ]);
+    }
+  }
+  else {
+    // Log if the entity type is not a node.
+    \Drupal::logger('article_deletion')->debug('Entity is not a node. Entity type: {type}', [
+      'type' => $entity->getEntityTypeId(),
+    ]);
+  }
+}
