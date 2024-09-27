@@ -1,0 +1,6 @@
+services:
+  article_deletion_logger.subscriber:
+    class: Drupal\article_deletion_logger\EventSubscriber\ArticleDeletionSubscriber
+    arguments: ["@logger.factory", "@current_user"]
+    tags:
+      - { name: event_subscriber }

@@ -1,0 +1,7 @@
+name: "Article Deletion Logger"
+type: module
+description: "Logs all article deletion operations with sufficient details."
+core_version_requirement: ^10
+package: Custom
+dependencies:
+  - jsonapi

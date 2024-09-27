@@ -1,0 +1,14 @@
+uuid: a0ae80e2-3fbe-4b8f-8699-fd83f20774ea
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.react_user
+  module:
+    - user
+id: user_add_role_action.react_user
+label: 'Add the react user role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: react_user

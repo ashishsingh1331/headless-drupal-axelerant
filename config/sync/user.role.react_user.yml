@@ -1,0 +1,14 @@
+uuid: eb869cd6-4f15-4c4f-ba2d-e801b915594b
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.article
+  module:
+    - node
+id: react_user
+label: 'react user'
+weight: 4
+is_admin: null
+permissions:
+  - 'delete own article content'
